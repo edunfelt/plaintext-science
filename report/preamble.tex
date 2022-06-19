@@ -1,0 +1,69 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{graphicx}
+\usepackage[]{ytableau}
+\usepackage{enumitem}
+
+% Font
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+% Theorem styles etc.
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+% Numbering equations
+\numberwithin{equation}{subsection}
+
+% Header & footer
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\usepackage{titlesec}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headsep}{0.71cm}
+
+\fancyhf{}
+\renewcommand{\subsectionmark}[1]{
+  \markright{\MakeUppercase{\thesubsection.\ #1}}}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\rightmark}}
+\fancyhead[LE, RO]{\thepage}
+
+
+% Titles
+\renewcommand{\thesection}{\arabic{section}} % No chapter numbers
+
+\titleformat{\section}[display]
+  {\scshape\fillast}
+  {\scshape section {\thesection}}{0.3em}{}[\vspace{1ex}]
+\titlespacing{\section}
+  {3pc}{*3}{*2}[3pc]
+
+\titleformat{\subsection}[runin]
+  {\normalfont\bfseries}
+  {\S\ \thesubsection.}{.5em}{}[.]
+\titlespacing{\subsection}
+  {\parindent}{1.5ex plus .1ex minus .2ex}{5pt}
+
+% Table of contents
+\usepackage[titles]{tocloft}
+\renewcommand{\contentsname}{\LARGE\sc{Table of contents}}
+\renewcommand{\cftsecfont}{\normalfont\bfseries}% titles in bold
+\renewcommand{\cftsecpagefont}{\normalfont\bfseries}% page numbers in bold
+
+% References
+\allsectionsfont{\sc\LARGE}
+
+% Some new commands
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathop{}\mathbb{N}}
+\newcommand{\Q}{\mathop{}\mathbb{Q}}
+\newcommand{\R}{\mathop{}\mathbb{R}}
+\newcommand{\C}{\mathop{}\mathbb{C}}
