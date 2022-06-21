@@ -9,6 +9,7 @@ classoption:
 - twoside
 - a4paper
 - 12pt
+- dvipsnames
 geometry:
 - left=3cm
 - right=5cm
