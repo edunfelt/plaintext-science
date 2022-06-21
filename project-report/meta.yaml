@@ -1,0 +1,17 @@
+title: "Project"
+date: \today
+author: "Emilia Dunfelt"
+reference-section-title: References
+documentclass: article
+classoption:
+- a4paper
+- 12pt
+- notitlepage
+- dvipsnames
+geometry:
+- left=1.5in
+- right=1.5in
+- bottom=1.7in
+- top=1.5in
+include-before:
+  - '`\tableofcontents{}`{=latex}'

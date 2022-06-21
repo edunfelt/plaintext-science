@@ -1,0 +1,17 @@
+metadata:
+  bibliography: content/bibliography.bib
+  csl: assets/acm-sig-proceedings-long-author-list.csl
+filters:
+  - pandoc-secnos
+  - pandoc-eqnos
+  - pandoc-fignos
+  - pandoc-tablenos
+  - pandoc-citeproc
+pdf-engine: pdflatex
+number-sections: true
+reference-links: true
+include-in-header:
+  - preamble.tex
+input-files:
+  - content/sections/s1.md
+  - content/sections/s2.md

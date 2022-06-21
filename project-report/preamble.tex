@@ -1,0 +1,97 @@
+\usepackage[utf8]{inputenc}
+
+%================%
+% Misc. packages %
+%================%
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{graphicx}
+\usepackage{csquotes}   % nice quotes
+\usepackage{enumitem}   % nice enum
+\usepackage[ruled,vlined]{algorithm2e}  % pseudocode
+
+%======%
+% Font %
+%======%
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+%========%
+% Colors %
+%========%
+\newcommand{\TODO}[1]{\begingroup\color{Maroon}#1\endgroup}
+\newcommand{\OLD}[1]{\begingroup\color{Gray}#1\endgroup}
+
+%=======%
+% Links %
+%=======%
+\usepackage{hyperref}
+\usepackage{xurl}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+}
+
+%=================%
+% Header & footer %
+%=================%
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.3pt}
+\setlength{\headsep}{1.2cm}
+\setlength\headheight{14.5pt}
+
+\fancyhf{}
+\renewcommand{\subsectionmark}[1]{
+  \markright{\MakeUppercase{\thesubsection.\ #1}}}
+  \lhead{\nouppercase{\leftmark}}
+  \rhead{\nouppercase{\rightmark}}
+\cfoot{\thepage}
+
+%========%
+% Titles %
+%========%
+\usepackage{titlesec, color}
+
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\section}[hang]
+  {\large\bfseries}
+  {\thesection\ \ \textcolor{gray75}{$\mid$}\quad}{0pt}{\large\bfseries}
+
+\titleformat{\subsection}[runin]
+  {\bfseries}
+  {\thesubsection.}{.5em}{}[.]
+\titlespacing{\subsection}
+  {\parindent}{1.5ex plus .1ex minus .2ex}{5pt}
+
+%===================%
+% Table of contents %
+%===================%
+\usepackage[titles]{tocloft}
+\renewcommand{\contentsname}{\large\sc{Table of contents}}
+\renewcommand{\cftsecfont}{\normalfont\bfseries}% titles in bold
+\renewcommand{\cftsecpagefont}{\normalfont\bfseries}% page numbers in bold
+
+%=====================%
+% Theorem styles etc. %
+%=====================%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\numberwithin{equation}{subsection}
+
+%=============%
+% Common sets %
+%=============%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathop{}\mathbb{N}}
+\newcommand{\Q}{\mathop{}\mathbb{Q}}
+\newcommand{\R}{\mathop{}\mathbb{R}}
+\newcommand{\C}{\mathop{}\mathbb{C}}
