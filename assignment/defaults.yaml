@@ -1,0 +1,17 @@
+metadata:
+  bibliography: content/bibliography.bib
+  csl: assets/chicago-fullnote-bibliography-with-ibid.csl
+  suppress-bibliography: true
+filters:
+  - pandoc-secnos
+  - pandoc-eqnos
+  - pandoc-fignos
+  - pandoc-tablenos
+  - pandoc-citeproc
+pdf-engine: pdflatex
+number-sections: true
+reference-links: true
+include-in-header:
+  - preamble.tex
+input-files:
+  - content/problems/p1.md

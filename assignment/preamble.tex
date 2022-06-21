@@ -1,0 +1,80 @@
+\usepackage[utf8]{inputenc}
+
+%================%
+% Misc. packages %
+%================%
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[ruled,vlined]{algorithm2e}  % pseudocode
+
+%=================%
+% Header & footer %
+%=================%
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+\pagestyle{fancy}
+\setlength{\headheight}{15pt}
+\lhead{Emilia Dunfelt}\chead{CODE Assignment 1}\rhead{\today}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%=============%
+% Eunmeration %
+%=============%
+\usepackage{enumitem}
+\setlist{itemsep=0pt}
+\renewcommand{\theenumi}{(\sl \alph{enumi})}
+\renewcommand{\labelenumi}{\theenumi}
+\renewcommand{\theenumii}{\roman{enumii}}
+
+%=======================================%
+% Counters for problems and subsections %
+%=======================================%
+\newcounter{ProblemNum}
+\newcounter{SubProblemNum}[section]
+
+\renewcommand{\theProblemNum}{\arabic{ProblemNum}}
+\renewcommand{\theSubProblemNum}{\alph{SubProblemNum}}
+
+\renewcommand*{\section}[1]{\stepcounter{ProblemNum} %
+   {\newpage\sc Problem \theProblemNum. \; #1}}
+\newcommand*{\soln}[1]{\paragraph*{#1}}
+\renewcommand*{\subsection}[1]{\setcounter{SubProblemNum}{0} \soln{\sc Solution}}
+\renewcommand*{\subsubsection}[1] %
+    {\stepcounter{SubProblemNum} \soln{\sl Part (\theSubProblemNum)\newline}}
+
+%======%
+% Font %
+%======%
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+%========%
+% Colors %
+%========%
+\newcommand{\TODO}[1]{\begingroup\color{Maroon}#1\endgroup}
+\newcommand{\OLD}[1]{\begingroup\color{Gray}#1\endgroup}
+
+%=====================%
+% Theorem styles etc. %
+%=====================%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{claim}{Claim}
+\newcommand\exend{{\hfill$\bigstar$}}
+\newcommand\prfend{{\hfill$\blacksquare$}}
+
+%=============%
+% Common sets %
+%=============%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathop{}\mathbb{N}}
+\newcommand{\Q}{\mathop{}\mathbb{Q}}
+\newcommand{\R}{\mathop{}\mathbb{R}}
+\newcommand{\C}{\mathop{}\mathbb{C}}
