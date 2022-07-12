@@ -32,6 +32,7 @@ For now there are the following templates:
 - `report`: for longer reports with sections and subsections
 - `assignment`: for homework assignments, sections are problems, subsections are solutions
 - `project-report`: shorter reports with sections and subsections
+- `lecture-notes`: for writing notes where sections are lectures, supports latex-boxes
 
 ## Resources
 The following resources have been useful in the development of this collection:
