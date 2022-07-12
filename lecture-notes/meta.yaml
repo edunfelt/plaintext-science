@@ -1,0 +1,16 @@
+title: "Lecture notes"
+date: \today
+author: "Emilia Dunfelt"
+reference-section-title: References
+documentclass: article
+classoption:
+- a4paper
+- 12pt
+- twoside
+- notitlepage
+- dvipsnames
+include-before:
+  - '`\maketitle{}`{=latex}'
+  - '`\thispagestyle{empty}`{=latex}'
+  - '`\let\Begin\begin`{=latex}'
+  - '`\let\End\end`{=latex}'

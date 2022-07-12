@@ -1,0 +1,118 @@
+\usepackage[utf8]{inputenc}
+
+%================%
+% Misc. packages %
+%================%
+\usepackage{amsmath, amssymb, amsfonts, amsthm}
+\usepackage{graphicx}
+\usepackage{csquotes}   % nice quotes
+\usepackage{enumitem}   % nice enum
+\usepackage[ruled,vlined]{algorithm2e}  % pseudocode
+\usepackage{tikz-cd}    % commutative diagrams
+
+%======%
+% Font %
+%======%
+\usepackage{libertine}
+\usepackage[libertine]{newtxmath}
+
+%=======%
+% Links %
+%=======%
+\usepackage{hyperref}
+\usepackage{xurl}
+\hypersetup{
+    colorlinks=false,
+    linkcolor=blue,
+}
+
+%=================%
+% Header & footer %
+%=================%
+\usepackage{fancyhdr}
+\usepackage{sectsty}
+
+\fancyhead[LO]{\nouppercase{\leftmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\fancyhead[RO,LE]{\thepage}
+\cfoot{}
+
+\pagestyle{fancy}
+\allsectionsfont{\centering}
+\renewcommand{\headrulewidth}{0pt}
+\setlength{\headsep}{1.2cm}
+\setlength\headheight{14.5pt}
+
+\oddsidemargin=51pt
+\evensidemargin=0pt
+
+%========%
+% Titles %
+%========%
+\usepackage{titlesec}
+
+\newcommand{\sectionbreak}{\clearpage}
+\titleformat{\section}[frame]
+    {\normalfont}
+    {\filright
+        \footnotesize
+        \enspace\scshape LECTURE \thesection\enspace}
+    {6pt}
+    {\Large\bfseries\filcenter}
+
+% Margins
+\evensidemargin=51pt
+\oddsidemargin=0pt
+
+%=====================%
+% Theorem styles etc. %
+%=====================%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+%=======%
+% Boxes %
+%=======%
+\usepackage{mdframed}
+
+\mdfdefinestyle{examplestyle}{%
+	linecolor=black,linewidth=1pt,% 
+    skipabove=10pt,%
+	frametitlerule=true,%
+	frametitlebackgroundcolor=gray!10,
+        innertopmargin=\topskip, 
+}
+
+\mdfdefinestyle{impstyle}{%
+	linecolor=red,linewidth=1pt,% 
+    skipabove=10pt,%
+	frametitlerule=true,%
+	frametitlebackgroundcolor=red!10,
+        innertopmargin=\topskip, 
+}
+
+\mdfdefinestyle{notestyle}{%
+	linecolor=blue,linewidth=1pt,% 
+    skipabove=10pt,%
+	frametitlerule=true,%
+	frametitlebackgroundcolor=blue!10,
+        innertopmargin=\topskip, 
+}
+
+\mdtheorem[style=examplestyle]{example}{Example}[section]
+\mdtheorem[style=impstyle]{important}{Important note.}
+\mdtheorem[style=notestyle]{note}{Note.}[section]
+
+%=============%
+% Common sets %
+%=============%
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathop{}\mathbb{N}}
+\newcommand{\Q}{\mathop{}\mathbb{Q}}
+\newcommand{\R}{\mathop{}\mathbb{R}}
+\newcommand{\C}{\mathop{}\mathbb{C}}
+
