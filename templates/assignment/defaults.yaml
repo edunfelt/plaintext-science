@@ -2,6 +2,7 @@ metadata:
   bibliography: content/bibliography.bib
   csl: assets/chicago-fullnote-bibliography-with-ibid.csl
   suppress-bibliography: true
+  link-citations: true
 filters:
   - pandoc-xnos
   - assets/filters/defenv.py
