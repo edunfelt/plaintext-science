@@ -11,14 +11,14 @@ These are my boilerplates for authoring scientific (mainly mathematical) texts u
 
 ## Building
 ### Structure
-Each toplevel subdirectory contains a template and relevant files.
+Each template subdirectory contains a template and relevant files.
 A template directory contains the following:
 
 - `Makefile`: you probably don't need to change this
 - `deafults.yaml`: default pandoc settings, use this to add new sections and subsections
 - `meta.yaml`: file metadata and basic layout settings
 - `preamble.tex`: LaTeX layout settings
-- `assets/`: contains the CSL
+- `assets/`: contains the CSL and filters
 - `build/`: output directory
 - `content/`: contains raw `.md`-files, images, and bibliography
 
@@ -41,4 +41,5 @@ The following resources have been useful in the development of this collection:
 - [davecap/markdown-latex-boilerplate](https://github.com/davecap/markdown-latex-boilerplate)
 - [jaantollander/Markdown-Templates](https://github.com/jaantollander/Markdown-Templates)
 - [CSL](https://editor.citationstyles.org/about/)
+- [Pandoc filters for scientific writing](https://gedenkt.at/blog/scientific-pandoc/)
 
