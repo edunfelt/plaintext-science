@@ -10,7 +10,7 @@
 %======%
 % Font %
 %======%
-\usepackage{libertine}
+\usepackage[tt=false]{libertine}
 \usepackage[libertine]{newtxmath}
 
 %========%
@@ -90,3 +90,12 @@
 \newcommand{\Q}{\mathop{}\mathbb{Q}}
 \newcommand{\R}{\mathop{}\mathbb{R}}
 \newcommand{\C}{\mathop{}\mathbb{C}}
+
+%==========%
+% Listings %
+%==========%
+\usepackage{newfloat}
+\DeclareFloatingEnvironment[name=Algorithm]{listing}
+% reduce space between listing caption and actual listing, taken from:
+% https://stackoverflow.com/questions/2318598/how-to-reduce-the-seperation-from-other-text-using-latex-minted
+\setlength\partopsep{-\topsep}

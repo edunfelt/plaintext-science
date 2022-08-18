@@ -3,11 +3,10 @@ metadata:
   csl: assets/chicago-fullnote-bibliography-with-ibid.csl
   suppress-bibliography: true
 filters:
-  - pandoc-secnos
-  - pandoc-eqnos
-  - pandoc-fignos
-  - pandoc-tablenos
-  - pandoc-citeproc
+  - pandoc-xnos
+  - assets/filters/defenv.py
+  - assets/filters/linkref.py
+  - assets/filters/listing.py
 pdf-engine: pdflatex
 number-sections: true
 reference-links: true
